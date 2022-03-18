@@ -1,25 +1,21 @@
 import logo from './logo.svg';
+import { ArrayVisualier } from './components/searchVisualiser/searchVis';
 import './App.css';
+import React, {Component} from 'react';
+import NavBar from './components/navBar/navbar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {  } 
+  render() { 
+    return (
+      <React.Fragment>
+        <NavBar></NavBar>
+        <div className='container'>
+          <ArrayVisualier  />
+      </div>
+    </React.Fragment>
+    );
+  }
 }
-
+ 
 export default App;
