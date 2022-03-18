@@ -14,11 +14,51 @@
     background-color: white;
 }
 
-.array-container {
-    margin-top: 20px;
-    margin-bottom: 20px;
+.array-box-color {
+    display: inline-block;
+    border: 3px solid DeepSkyBlue;
+    color: DeepSkyBlue;
+    padding: 10px 15px;
+    margin: 5px 10px;
+    background-color: DeepSkyBlue;
 }
 
+.array-box-color2 {
+    display: inline-block;
+    border: 3px solid red;
+    color: red;
+    padding: 10px 15px;
+    margin: 5px 10px;
+    background-color: red;
+}
+
+.array-container {
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+div.sliderDesc {
+    margin-top: 20px;
+}
+
+div.sliderPanel {
+    margin-top: 20px;
+}
+
+span.button {
+    margin: 5px 10px;
+}
+
+ul {
+    display: block;
+    list-style-type: None;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
 
 /* Below styles are used for transition property of the divs selected. */
 
