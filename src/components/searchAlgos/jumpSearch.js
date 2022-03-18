@@ -32,13 +32,14 @@ function getJumpSearchAnimations(arr, target) {
         animations.push(blockStart);
 
 		//If we reached the next block or end of array, the target doesn't exist
-		if (blockStart == Math.min(currentStep, len)) {
+		if (blockStart === Math.min(currentStep, len)) {
 			return -1;
         }
 	}
 
 	//Check if the element is the target, if not, target doesn't exist.
-	if (arr[blockStart] == target) {
+	if (arr[blockStart] === target) {
+        animations.push(blockStart);
 		return animations
     } else {
 		return -1;
