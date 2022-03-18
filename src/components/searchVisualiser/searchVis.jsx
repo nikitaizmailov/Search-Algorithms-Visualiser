@@ -270,11 +270,6 @@ class ArrayVisualier extends Component {
                                         Fibonacci Search
                                     </button>
                                 </span>
-                                <span className='button'>
-                                    <button className='btn btn-primary'>
-                                        AnyText
-                                    </button>
-                                </span>
                             </div>
                         </div>
                     </div>
