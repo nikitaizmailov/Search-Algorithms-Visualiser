@@ -4,6 +4,7 @@ import "./arrayStyles.css"
 import { getBinarySearchAnimations } from "../searchAlgos/binarySearch";
 import { getLinearSearchAnimations } from '../searchAlgos/linearSearch';
 import { getJumpSearchAnimations } from '../searchAlgos/jumpSearch';
+import { getInterpolationSearchAnimations } from '../searchAlgos/interpolationSearch';
 
 const HIGHLIGHT_COLOR = 'DeepSkyBlue';
 const MIDDLE_NUM_COLOR = "red";
@@ -121,7 +122,6 @@ class ArrayVisualier extends Component {
     linearSearchAlgo = () => {
         const animations = getLinearSearchAnimations(this.state.arrayOfNums, this.state.numberToFind);
         const divs = document.getElementsByClassName("array-box");
-        console.log(animations);
 
         for (let i = 0; i < animations.length; i++) {
             const isLastElem = (i === animations.length - 1)
@@ -207,6 +207,13 @@ class ArrayVisualier extends Component {
         }
     }
 
+    interpolationSearchAlgo = () => {
+        const animations = getInterpolationSearchAnimations(this.state.arrayOfNums, this.state.arrayOfNums.length, this.state.numberToFind);
+        const divs = document.getElementsByClassName("array-box");
+
+        console.log(animations);
+    }
+
     render() { 
         return (
                 <React.Fragment>
@@ -261,12 +268,12 @@ class ArrayVisualier extends Component {
                                     </button>
                                 </span>
                                 <span className='button'>
-                                    <button className='btn btn-primary'>
+                                    <button className='btn btn-primary' onClick={() => {this.binarySearchAlgo()}}>
                                         Interpolation Search
                                     </button>
                                 </span>
                                 <span className='button'>
-                                    <button className='btn btn-primary'>
+                                    <button className='btn btn-primary' onClick={() => {this.jumpSearchAlgo()}}>
                                         Fibonacci Search
                                     </button>
                                 </span>
